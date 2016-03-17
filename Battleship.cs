@@ -110,22 +110,19 @@ namespace BattleShip
             {
                 directions[i] = new int[2];
             }
-            directions[0][0] = 0;
-            directions[0][1] = 1;
-            directions[1][0] = 1;
-            directions[1][1] = 1;
-            directions[2][0] = 1;
-            directions[2][1] = 0;
-            directions[3][0] = 1;
-            directions[3][1] = -1;
-            directions[4][0] = 0;
-            directions[4][1] = -1;
-            directions[5][0] = -1;
-            directions[5][1] = -1;
-            directions[6][0] = -1;
-            directions[6][1] = 0;
-            directions[7][0] = -1;
-            directions[7][1] = 1;
+         
+            
+int i,j;
+
+if((i==0 && j==1) || (i==1 && j==0) || (i==1 && j==1) || (i==2 && j==0) || (i==3 && j==0)|| (i==7 && j==1))
+
+      directions[i][j]=1;
+
+else if ((i==0 && j==0)|| (i==2 && j==1)||(i==4 && j==0) || (i==6 && j==1))
+     
+      directions[i][j]=0;
+else if ((i==3 && j==1)|| (i==4 && j==1)|| (i==5 && j==0)|| (i==5 && j==1)|| (i==6 && j==0)|| (i==7 && j==0))
+      directions[i][j]=-1;
             for (int i = 0; i < navy.Length; i++)
             {
                 do
